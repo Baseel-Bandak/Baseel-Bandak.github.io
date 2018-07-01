@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poiret One", cursive;
+  color: var(--font-color);
+}
+
+:root {
+  --main-color: #494e6b;
+  --second-color: #98878f;
+  --third-color: #985e6d;
+  --forth-color: #192231;
+  --font-color: #fff;
+  --mini-size: 0.5em;
+  --small-size: 1em;
+  --main-size: 1.5em;
+  --second-size: 2em;
+  --large-size: 3em;
+  --xlarge-size: 6em;
+}
+
+p {
+  font-size: var(--second-size);
+}
+
+h2 {
+  font-size: var(--large-size);
+}
+
+h1 {
+  font-size: var(--xlarge-size);
+}
+
+body {
+  background: linear-gradient( #494e6b, #98878f, #985e6d, #192231, #494e6b, #98878f, #985e6d, #192231);
+}
+
+/*Welcome*/
+
+header {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background-image: url(images/thom-527.jpg);
+}
+
+.hello h1,
+h2,
+p {
+  width: 100%;
+  text-align: center;
+  color: var(--main-color);
+  padding-top: var(--small-size);
+}
+
+.hello h1 {
+  margin-bottom: var(--large-size);
+}
+
+.hello h2 {
+  padding-top: var(--second-size);
+}
+
+.hello p {
+  padding-top: var(--small-size);
+  padding-bottom: var(--small-size);
+}
+
+/*About*/
+
+#about {
+  margin: var(--xlarge-size);
+}
+
+.about {
+  display: inline-flex;
+  padding: var(--large-size);
+  border: solid var(--font-color);
+}
+
+.about p {
+  color: var(--font-color);
+  text-align: justify;
+}
+
+.my-photo {
+  width: 300px;
+  float: right;
+  border-radius: 350px;
+  padding: var(--main-size);
+}
+
+/*my skills*/
+
+#skills {
+  margin: var(--xlarge-size);
+}
+
+#skills p {
+  color: var(--font-color);
+  padding-bottom: var(--small-size);
+}
+
+.pic {
+  background-image: url(images/my-skills2.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: solid var(--font-color);
+  display: inline-block;
+  text-align: center;
+  padding: var(--xlarge-size);
+}
+
+.first-skills .my-skills {
+  width: 5%;
+  margin: var(--main-size);
+  margin-top: var(--large-size);
+}
+
+.second-skills .my-skills {
+  width: 6%;
+  margin: var(--main-size);
+}
+
+.third-skills .my-skills {
+  width: 12%;
+  margin: var(--main-size);
+  margin-bottom: var(--xlarge-size);
+}
+
+.my-skills:hover {
+  transform: scale(3);
+  transition: 0.5s;
+}
+
+/*my-porfessions*/
+
+#professions {
+  margin: var(--xlarge-size);
+}
+
+.time-line {
+  background: linear-gradient(#192231, #985e6d);
+  color: var(--font-color);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: solid var(--font-color);
+  border-radius: var(--mini-size);
+  text-align: center;
+  outline: none;
+  font-size: var(--main-size);
+  transition: 0.4s;
+}
+
+.active,
+.time-line:hover {
+  background: transparent;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background: transparent;
+  overflow: hidden;
+}
+
+/*Contact me*/
+
+#contact-me {
+  margin: var(--xlarge-size);
+}
+
+.my-contacts {
+  border: solid var(--font-color);
+  padding: var(--xlarge-size);
+}
+
+.my-contacts p {
+  color: var(--font-color);
+  padding: var(--main-size);
+}
+
+.tel {
+  text-align: left;
+}
+
+.eml {
+  text-align: right;
+}
+
+/*navbar - span*/
+
+span {
+  position: fixed;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
