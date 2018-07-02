@@ -17,6 +17,7 @@
   --second-size: 2em;
   --large-size: 3em;
   --xlarge-size: 6em;
+  --xxlarge-size: 9em;
 }
 
 p {
@@ -31,8 +32,15 @@ h1 {
   font-size: var(--xlarge-size);
 }
 
+#about,
+#skills,
+#professions,
+#contact-me {
+  margin: var(--xlarge-size);
+}
+
 body {
-  background: linear-gradient( #494e6b, #98878f, #985e6d, #192231, #494e6b, #98878f, #985e6d, #192231);
+  background: linear-gradient( #494e6b, #98878f,#192231, #985e6d,  #494e6b, #98878f,#192231, #985e6d );
 }
 
 /*Welcome*/
@@ -71,38 +79,30 @@ p {
 
 /*About*/
 
-#about {
-  margin: var(--xlarge-size);
-}
-
 .about {
-  display: inline-flex;
+  display: flex;
   padding: var(--large-size);
   border: solid var(--font-color);
+  align-items: center;
 }
 
 .about p {
   color: var(--font-color);
-  text-align: justify;
+  text-align: left;
+  padding-right: .5em;
 }
 
-.my-photo {
-  width: 300px;
-  float: right;
-  border-radius: 350px;
-  padding: var(--main-size);
+.photo {
+  text-align: center;
+}
+
+.photo img {
+  width: 70%;
+  border-radius: 50%;
 }
 
 /*my skills*/
 
-#skills {
-  margin: var(--xlarge-size);
-}
-
-#skills p {
-  color: var(--font-color);
-  padding-bottom: var(--small-size);
-}
 
 .pic {
   background-image: url(images/my-skills2.jpeg);
@@ -113,6 +113,7 @@ p {
   display: inline-block;
   text-align: center;
   padding: var(--xlarge-size);
+  margin-top: var(--xlarge-size);
 }
 
 .first-skills .my-skills {
@@ -133,18 +134,18 @@ p {
 }
 
 .my-skills:hover {
-  transform: scale(3);
+  transform: scale(2);
   transition: 0.5s;
 }
 
 /*my-porfessions*/
 
 #professions {
-  margin: var(--xlarge-size);
+  padding-top: var(--xlarge-size);
 }
 
 .time-line {
-  background: linear-gradient(#192231, #985e6d);
+  background: linear-gradient(#98878f, #192231, #192231, #985e6d);
   color: var(--font-color);
   cursor: pointer;
   padding: 18px;
@@ -155,6 +156,7 @@ p {
   outline: none;
   font-size: var(--main-size);
   transition: 0.4s;
+  margin: var(--small-size);
 }
 
 .active,
@@ -167,36 +169,35 @@ p {
   display: none;
   background: transparent;
   overflow: hidden;
+  margin-bottom: var(--main-size);
+ 
+}
+.job p, .job h2{
+  color: var(--font-color);
 }
 
 /*Contact me*/
 
-#contact-me {
-  margin: var(--xlarge-size);
-}
-
-.my-contacts {
+.my-contacts{
   border: solid var(--font-color);
-  padding: var(--xlarge-size);
-}
+  display:block;
 
-.my-contacts p {
-  color: var(--font-color);
-  padding: var(--main-size);
 }
-
-.tel {
-  text-align: left;
+.my-contacts p{
+  color: var(--font-color)
 }
-
-.eml {
-  text-align: right;
+.telephone{
+  float: left;
+}
+.email{
+  float: right;
 }
 
 /*navbar - span*/
 
 span {
   position: fixed;
+  font-size: 60px;
 }
 
 .overlay {
@@ -241,7 +242,9 @@ span {
   font-size: 60px;
 }
 
-@media screen and (max-height: 450px) {
+/*-------------------------------------Samsung S7-------------------------------------*/
+
+@media screen and (max-height: 500px) {
   .overlay a {
     font-size: 20px;
   }
@@ -249,5 +252,183 @@ span {
     font-size: 40px;
     top: 15px;
     right: 35px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  p {
+    font-size: var(--small-size);
+    text-align: center;
+  }
+  h2 {
+    font-size: var(--small-size);
+    text-align: center;
+  }
+  h1 {
+    font-size: var(--second-size);
+    text-align: center;
+  }
+  #about,
+  #skills,
+  #professions,
+  #contact-me {
+    margin: var(--second-size);
+  }
+  body {
+    background: linear-gradient(  #192231,#985e6d, #192231,#985e6d, #192231 ,#985e6d, #192231, #985e6d );
+  }
+  /*Welcome*/
+  header {
+    background-image: url(images/thom-527.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .hello h1,
+  h2,
+  p {
+    width: 100%;
+    text-align: center;
+    color: var(--main-color);
+    padding-top: var(--small-size);
+  }
+  /*-------------------------------------*/
+  /*About*/
+  .about {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: var(--mini-size);
+    border: solid var(--font-color);
+  }
+  .about p {
+    color: var(--font-color);
+    text-align: center;
+  }
+  .photo {
+    width: 50%;
+    border-radius: 50%;
+    padding: var(--mini-size);
+  }
+  /*my skills*/
+  #skills p {
+    color: var(--font-color);
+    padding-bottom: var(--small-size);
+  }
+  .pic {
+    background: none;
+    border: solid var(--font-color);
+    display: inline-block;
+    text-align: center;
+    padding: var(--mini-size);
+  }
+  .first-skills .my-skills {
+    width: 12%;
+    margin: var(--small-size);
+    margin-top: var(--main-size);
+  }
+  .second-skills .my-skills {
+    width: 12%;
+    margin: var(--mini-size);
+  }
+  .third-skills .my-skills {
+    width: 24%;
+    margin: var(--mini-size);
+    margin-bottom: var(--main-size);
+  }
+  .my-skills:hover {
+    transform: scale(2.7);
+    transition: 0.5s;
+  }
+  /*my-porfessions*/
+  #professions h1 {
+   
+    margin-bottom: var(--main-size);
+  }
+  .professions {
+    margin: var(--mini-size);
+  }
+  .time-line {
+    background: linear-gradient(#98878f, #192231, #192231, #985e6d);
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: solid var(--font-color);
+    border-radius: var(--mini-size);
+    text-align: center;
+    outline: none;
+    font-size: var(--main-size);
+    transition: 0.4s;
+    margin: 0;
+  }
+  .active,
+  .time-line:hover {
+    background: transparent;
+  }
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background: transparent;
+    overflow: hidden;
+    margin-bottom: var(--main-size);
+  }
+  .job p,
+  .job h2 {
+    color: var(--font-color);
+  }
+  /*Contact me*/
+  .my-contacts {
+    border: solid var(--font-color);
+    margin-top: var(--large-size);
+    padding: var(--mini-size);
+  }
+  .tel,
+  .wht,
+  .eml {
+    text-align: center;
+    padding-bottom: var(--small-size);
+    padding-top: var(--small-size)
+  }
+  /*navbar - span*/
+  span {
+    position: fixed;
+    font-size: 30px;
+  }
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
   }
 }
